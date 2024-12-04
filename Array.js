@@ -74,3 +74,17 @@
 
 
 
+//linear search 
+
+let arr = [2,3,4,5,6,7]
+function lSearch(arr,target){
+    for(let i=0;i<arr.length;i++){
+        if(arr[i]=== target){
+            return i
+        }
+    }
+    return -1
+}
+
+let res =  lSearch(arr,6)
+console.log(res);
