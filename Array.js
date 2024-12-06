@@ -76,15 +76,95 @@
 
 //linear search 
 
-let arr = [2,3,4,5,6,7]
-function lSearch(arr,target){
-    for(let i=0;i<arr.length;i++){
-        if(arr[i]=== target){
-            return i
+// let arr = [2,3,4,5,6,7]
+// function lSearch(arr,target){
+//     for(let i=0;i<arr.length;i++){
+//         if(arr[i]=== target){
+//             return i
+//         }
+//     }
+//     return -1
+// }
+
+// let res =  lSearch(arr,6)
+// console.log(res);
+
+// let arr = [2,3,4,2,3,5,3]
+
+// function lowest(arr){
+//     let min = arr[0]
+//     for(let i =0; i<arr.length;i++){
+//         if(arr[i]<min){
+//             min = arr[i]
+            
+//         }
+        
+//     }
+
+//     return min;
+// }
+
+// let res = lowest(arr)
+
+// console.log(res);
+
+
+
+let arr = [1,0,20,4,0,6]
+function moveZero(arr){
+   
+    let nonZeroI = 0
+
+    for(let i =0;i<arr.length;i++){
+        if(arr[i] !== 0){
+            let temp = arr[nonZeroI]
+            arr[nonZeroI] = arr[i];
+            arr[i] = temp
+            nonZeroI ++;
+
         }
+
+
     }
-    return -1
+    return arr;
+
 }
 
-let res =  lSearch(arr,6)
-console.log(res);
+console.log(moveZero(arr));
+
+
+function removeDupli(arr){
+    let result = []
+
+    for(let i= 0;i<arr.length;i++){
+        let isDupli = false;
+
+        for(let j =0;j<result.length;j++){
+            if(arr[i] === result[j]){
+                isDupli = true;
+                break;
+            }
+        }
+        if(isDupli !== true){
+            result.push(arr[i]) 
+        }
+    }
+    return result
+}
+
+console.log(removeDupli(arr));
+
+
+
+function isSorted(arr){
+    for(let i=1;i<arr.length;i++){
+        if(arr[i] < arr[i-1]){
+            return false
+        }
+           
+    }
+    return true
+
+}
+let arr1 = [1,2,3,4,5,6,7]
+console.log(isSorted(arr1));

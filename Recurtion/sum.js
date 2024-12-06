@@ -23,3 +23,4 @@ function sumOfArray(arr,n){
 
 let arr = [1,2,10,4,5]
 console.log(sumOfArray(arr,5));
+

@@ -29,6 +29,44 @@ class DoubleLinked{
         this.tail = newNode
     }
 
+    delete(value){
+    
+        if(this.head === null){
+            return console.log("emptyyy");
+        }
+
+        let current = this.head;
+
+        while(current !== null){
+            if(current.value === value){
+            //single node
+                if(current === this.head &&  current === this.tail){
+                    this.head == null;
+                    this.tail == null
+                }
+                // value is head
+                else if(current === this.head){
+                    this.head = current.next;
+                    this.head.prev = null;
+
+                }
+                //value is tail
+                else if(current = this.tail){
+                    this.tail = current.prev;
+                    this.tail.next = null;
+                }
+                //node is middle
+                else{
+                    current.prev.next = current.next;
+                    current.next.prev = current.prev;
+                }
+            }
+            current = current.next
+        }
+    }
+
+    
+
     print(){
         let current = this.head;
         let result = "";
