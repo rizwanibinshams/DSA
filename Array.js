@@ -168,3 +168,26 @@ function isSorted(arr){
 }
 let arr1 = [1,2,3,4,5,6,7]
 console.log(isSorted(arr1));
+
+
+let arr2=[1,2,0,0,5,0,4,9,0]
+function mZero(arr2){
+    let result = [];
+    zcount = 0;
+
+    for(let i=0;i<arr2.length;i++){
+        if(arr2[i]===0){
+            zcount++
+        }else{
+            result.push(arr2[i])
+        }
+    }
+
+    for(let i=0;i<zcount;i++){
+        result.push(0)
+    }
+    return result
+
+}
+
+console.log("zeeeeee",mZero(arr2));

@@ -51,3 +51,6 @@ function prime(n,d=2){
 }
 
 console.log(prime(11));
+
+
+

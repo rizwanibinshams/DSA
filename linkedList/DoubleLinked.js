@@ -51,7 +51,7 @@ class DoubleLinked{
 
                 }
                 //value is tail
-                else if(current = this.tail){
+                else if(current === this.tail){
                     this.tail = current.prev;
                     this.tail.next = null;
                 }

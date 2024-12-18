@@ -45,6 +45,34 @@
 
     }
 
+    updatePrevVal(target,newVal){
+        if(this.head.value === target){
+            return console.log("no previous value");
+        }
+
+        let current = this.head;
+        let prev = null
+        while(current !== null){
+            if(current.value == target ){
+                prev.value = newVal;
+                return
+            }
+            prev = current;
+            current = current.next
+        }
+    }
+
+    search(value){
+        let current = this.head;
+        while(current !== null){
+            if(current.value === value){
+                return true
+            }
+            current = current.next;   
+        }
+        return false
+    }
+
     addAfter(target,newValue){
         let newNode = new Node(newValue)
         let current = this.head;
@@ -70,7 +98,6 @@
         }
         return console.log(result);
     }
-    
  }
 
  let list = new Slink()
@@ -79,9 +106,10 @@
  list.add(30)
  list.add(40)
  list.add(50)
- list.addAfter(30,31)
- list.delete(40)
-
+console.log( list.search(40));
+list.updatePrevVal(20,39)
+list.addAfter(30,31)
+ //list.delete(40)
  list.print()
 
 
