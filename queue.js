@@ -71,7 +71,7 @@ class Queue{
     dequeue(){
         const item = this.items[this.front]
         delete this.items[this.front]
-        this.front++
+        this.front++ 
         return item
     }
     isEmpty(){

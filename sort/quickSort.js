@@ -1,5 +1,5 @@
 
-
+// Time Complexity ===> O(n*n)
 
 function quickSort(arr){
     if(arr.length <= 1){

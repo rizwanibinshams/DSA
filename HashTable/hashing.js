@@ -20,7 +20,7 @@ class HashTable{
     }
 
     get(key){
-        let index = this.hash(key);
+        let index = this.hash(key); 
         return this.table[index];
     }
 

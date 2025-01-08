@@ -1,4 +1,7 @@
 
+// Time Complexity ====> O(n long n)
+// Space Complexity ====> O(n)
+
 
 function mergeSort(arr){
     if(arr.length <= 1){

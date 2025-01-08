@@ -18,6 +18,9 @@ class Stack{
 
         return this.items.pop()
     }
+    peek(){
+       return console.log(this.items[0]); 
+    }
 
     display(){
         if(this.isEmpty()){
